@@ -13,7 +13,7 @@ The system normally in place require per to per communication which in most case
 to the amount of students normally enrolled in these institution.
 The problem can be addressed if there was a system that could assist students with the registration process, and 
 giving academic advice to students so that they can achieve their career goals. The Student Portal is that system.
-It will give student academic advice, registration tips, further assistance with a academic advisor if necessary.
+It will give student academic advice, registration tips and further assistance with a academic advisor if necessary.
 
 
 
