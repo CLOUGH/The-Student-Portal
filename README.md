@@ -17,9 +17,9 @@ It will give student academic advice, registration tips and further assistance w
 
 
 
-Some of the features include:
-
-**Student
+System features:
+----------------
+**Student**
 * View User Profile
 * Edit User Profile
 * View Courses
@@ -30,8 +30,7 @@ Some of the features include:
 * Send Messages
 * Get Course Selection Advisory
 
-
-**Assistant
+**Assistant**
 * View User Profile
 * Edit User Profile
 * View Course
@@ -40,7 +39,7 @@ Some of the features include:
 * View Messages
 * Send Messages
 
-**Admin (New)
+**Admin (New)**
 * Add course
 * Delete Course
 * Add Schedules
