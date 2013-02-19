@@ -11,14 +11,29 @@ $(document).ready(function(){
 		var description = $("textarea[name=description]");
 		if(is_fields_valid())
 		{
-			$.post('save-course.php',
-				{title:title.val(), subject:subject.val(), code:code.val(), simester:simester.val(),
-				faculty:faculty.val(), level:level.val(), credit:credit.val(), type:type.val(),
-				description:description.val()}, function(data){
-					console.log(data);
-				if(data.trim()==="success")
-					populateBody('course management');
-			});
+			if($(this).attr("id")=='save-course')
+			{
+				console.log("save-course");
+				$.post('save-course.php',
+					{title:title.val(), subject:subject.val(), code:code.val(), simester:simester.val(),
+					faculty:faculty.val(), level:level.val(), credit:credit.val(), type:type.val(),
+					description:description.val()}, function(data){
+					if(data.trim()==="success")
+						populateBody('course management');
+				});
+			}else if($(this).attr("id")=='update-course')
+			{
+				console.log("update-course");
+
+				var id = $("input[name=id]");
+				$.post('update-course.php',
+					{id:id.val(), title:title.val(), subject:subject.val(), code:code.val(), simester:simester.val(),
+					faculty:faculty.val(), level:level.val(), credit:credit.val(), type:type.val(),
+					description:description.val()}, function(data){
+					if(data.trim()==="success")
+						populateBody('course management');
+				});
+			}
 		}
 		return false;
 	});

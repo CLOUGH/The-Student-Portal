@@ -19,14 +19,14 @@ unset($_SESSION['user_id']);
 	{
 		$selected_user =  $result->fetch_assoc();
 		$_SESSION['user_id'] = $selected_user['id'];
-		header("Location:http://$application_root/index.php");
+		header("Location:../index.php");
 		exit;
 	}
 	else {
 
 		$_SESSION["error_message"]= "The password or username entered is invalid.";
 		echo $_SESSION['error_message'];
-		header("Location:http://$application_root/login");
+		header("Location:../login");
 		exit;
 	}
 

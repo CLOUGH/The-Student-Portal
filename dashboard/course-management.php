@@ -20,7 +20,7 @@
 			<td><?php echo $course->getFaculty();?></td>
 			<td><?php echo $course->getCredit();?></td>
 			<td><?php echo $course->getSimester();?></td>
-			<td><a href="" onclick="editCourse(<?php echo $course->getID() ?>)"><i class="icon-pencil"></i></a></td>
+			<td><a href="#" onclick="editCourse(<?php echo $course->getID() ?>)"><i class="icon-pencil"></i></a></td>
 		</tr>
 	<?php endforeach; ?>
     <tr>

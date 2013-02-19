@@ -90,6 +90,10 @@ class Course
 	{
 		return $this->faculty;
 	}
+	public function getType()
+	{
+		return $this->type;
+	}
 	public function getSimester()
 	{
 		return $this->simester;

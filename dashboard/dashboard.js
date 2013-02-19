@@ -7,6 +7,11 @@ function populateBody(name)
 				$("#sidebar-body").empty().append(data);
 			});
 			break;
+		case "user management":
+			$.post('user-management.php',{}, function(data){
+				$("#sidebar-body").empty().append(data);
+			});
+			break;
 		case "create course":
 			$.post('create-course.php',{}, function(data){
 				$("#sidebar-body").empty().append(data);
@@ -17,6 +22,7 @@ function populateBody(name)
 }
 function editCourse(id)
 {
+	console.log(id+"reached");
 	$.post('create-course.php?id='+id,{}, function(data){
 		$("#sidebar-body").empty().append(data);
 	});

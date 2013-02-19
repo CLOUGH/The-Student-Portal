@@ -30,6 +30,34 @@ define('DATABASE_NAME', $database_name);
 			$this->last_name=$row['last_name'];
 			$this->email=$row['email'];
 			$this->type=$row['type'];
+			$result->free();
+			$db->close();
+		}
+		public static function getAllUserIds()
+		{
+			$db = new MySQLi(MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, DATABASE_NAME);
+			$sql="SELECT u.id	FROM users u";
+
+			$result= $db->query($sql);
+			$ids=array();
+
+			for($i=0;$i<$result->num_rows;$i++)
+			{
+				$row = $result->fetch_assoc();
+				$ids[$i]=$row['id'];
+			}
+			return $ids;
+		}
+		public static function getUserTypeS($id)
+		{
+			$db = new MySQLi(MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, DATABASE_NAME);
+			$sql="SELECT ut.name FROM user_types  ut WHERE ut.id='$id'";
+
+			$result=$db->query($sql);
+			$row = $result->fetch_assoc();
+			$result->free();
+			$db->close();
+			return $row['name'];
 		}
 
 		public function getID()

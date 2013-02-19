@@ -46,13 +46,13 @@
 
 							<ul class="nav">
 								<li class="<?php echo isLocation('website')?'active':''; ?>">
-									<a role="button" href="<?php echo 'http://'.$application_root.'/home'?>">Website</a>
+									<a role="button" href="<?php echo '../home'?>">Website</a>
 								</li>
 								<li class="<?php echo isLocation('dashboard')?'active':''; ?>">
-									<a role="button" href="<?php echo 'http://'.$application_root.'/dashboard'?>">Dashboard</a>
+									<a role="button" href="<?php echo '../dashboard'?>">Dashboard</a>
 								</li>
 								<li>
-									<a href="<?php echo 'http://'.$application_root.'/login/logout.php'?>">
+									<a href="<?php echo '../login/logout.php'?>">
 									<i id="admin-logout-icon" class="icon-off"></i>
 								</a></li>
 							</ul>
@@ -73,25 +73,25 @@
 
 					<ul class="nav">
 						<li class="<?php echo isLocation('home')?'active':''; ?>" >
-							<a role="button" href="<?php echo 'http://'.$application_root.'/home'?>">Home</a>
+							<a role="button" href="<?php echo '../home'?>">Home</a>
 						</li>
 						<li class="dropdown <?php echo isLocation('proflie management')?'active':''; ?>">
 							<a class="dropdown-toggle" data-toggle="dropdown"  role="button" href="#">Profile Management</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a tabindex="-1" href="<?php echo 'http://'.$application_root.'/profile'?>">View Student Profile</a></li>
+								<li><a tabindex="-1" href="<?php echo '../profile'?>">View Student Profile</a></li>
 							</ul>
 						</li>
 						<li class="dropdown <?php echo isLocation('course advisory')?'active':''; ?>">
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">Course Advisory</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" >
-								<li><a tabindex="-1" href="<?php echo 'http://'.$application_root.'/search-course'?>">Search Course</a></li>
+								<li><a tabindex="-1" href="<?php echo '../search-course'?>">Search Course</a></li>
 								<li><a tabindex="-1" href="">Compare Course Timetables</a></li>
 							</ul>
 						</li>
 						<li class="dropdown <?php echo isLocation('register')?'active':''; ?>">
 							<a  class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">Register</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a tabindex="-1" href="<?php echo 'http://'.$application_root.'/register_course'?>">Register Course</a></li>
+								<li><a tabindex="-1" href="<?php echo '../register_course'?>">Register Course</a></li>
 								<li><a tabindex="-1" href="">Request Override</a></li>
 							</ul>
 						</li>
@@ -103,7 +103,7 @@
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 								<li><a tabindex="-1" href="#">Messages</a></li>
-								<li><a id="logout-link" tabindex="-1" href="<?php echo 'http://'.$application_root.'/login/logout.php'?>">
+								<li><a id="logout-link" tabindex="-1" href="<?php echo '../login/logout.php'?>">
 									Logout
 									<i class="icon-off"></i>
 								</a></li>

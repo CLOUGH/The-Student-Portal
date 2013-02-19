@@ -17,7 +17,7 @@
     			</a>
     		</li>
     		<li>
-    			<a href="#">
+    			<a href="#" onclick="populateBody('user management');">
     				<i class="icon-chevron-right"></i>
     				User Management
     			</a>
