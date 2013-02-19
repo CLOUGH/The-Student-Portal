@@ -1,0 +1,14 @@
+.navbar-inner
+{
+	background: #fff;
+	color: #000;
+	box-shadow: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+	text-shadow: none;
+	padding: 5px 0 10px;
+	border: 1px solid #fff;
+}

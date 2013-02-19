@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css" title="style">
     <script type="text/javascript" src="../common/jquery/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="../common/jquery/jquery.backstretch.min.js"></script>
     <?php session_start();?>
 </head>
 
