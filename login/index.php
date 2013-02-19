@@ -31,7 +31,7 @@
                     <label for="password">Password</label><br />
                     <input type="password" name="password" id="password" maxlength="20" class="text"/>
                 </p>
-                <p>
+                <p id="submit">
                     <input class="button" type="submit" name="Login" value="Login"/>
                 </p>
             </form>
