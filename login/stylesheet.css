@@ -15,7 +15,7 @@
 	margin-top: 100px;
 
 }
-.fade{
+.slides{
 	position: relative;
 	width: 720px;
 	margin: 0px auto;
@@ -96,13 +96,10 @@ body
 {
 	font-family: sans-serif;
 }
-.heading{
+.title{
 	font-family: kocoon, sans-serif;
 	color: #008B00;
-	text-align: center;
-	font-size: 25pt;
-	margin-bottom: 50px;
-	margin-top: 20px;
+	font-size: 12pt;
 }
 h1
 {
@@ -122,4 +119,10 @@ h1
 	text-align: center;
 	height: 10px;
 	margin-left: 10px;
+}
+.items{
+	margin-right:10px;
+}
+.demo3{
+	margin-left: 67px;
 }
