@@ -15,6 +15,19 @@
 	margin-top: 100px;
 
 }
+.fade{
+	position: relative;
+	width: 720px;
+	margin: 0px auto;
+	border: solid #CCC 1px;
+	padding: 10px 20px 35px 20px;
+	background: rgba( 255, 255, 255, .8);
+	box-shadow: 0px 0px 10px rgba( 200, 200, 200, 1.0 );
+	border-radius: 5px;
+	overflow: hidden;
+	margin-top: 36px;
+	height: 87px;
+}
 form
 {
 	width: 720px;
@@ -82,6 +95,14 @@ form input.button:hover, form input.button:focus {
 body
 {
 	font-family: sans-serif;
+}
+.heading{
+	font-family: kocoon, sans-serif;
+	color: #008B00;
+	text-align: center;
+	font-size: 25pt;
+	margin-bottom: 50px;
+	margin-top: 20px;
 }
 h1
 {
