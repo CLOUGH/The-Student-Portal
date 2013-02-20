@@ -24,7 +24,7 @@
 		{
 			$('.dropdown-toggle').dropdown();
 			$(".collapse").collapse();
-			$.backstretch("http://cdn2.desizntech.info/wp-content/uploads/2012/12/02_blurred_backgrounds.jpg");
+			$.backstretch("../common/images/blurred-images.jpg");
 			var admin_nav_active = "website";
 			$("#admin-logout-icon").hover(function(){
 				$(this).attr("class","icon-off icon-white");
@@ -99,7 +99,7 @@
 					<ul class="nav" id="user-nav">
 						<li>
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
-								<span class="profile-icon-container"><i class="icon-user"></i></span>Warren
+								<span class="profile-icon-container"><i class="icon-user"></i></span><?php echo $user->getFirstName(); ?>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 								<li><a tabindex="-1" href="#">Messages</a></li>

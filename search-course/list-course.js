@@ -6,4 +6,8 @@ $(document).ready(function(){
 	},function(){
 		$(this).css("cursor","default");
 	});
+
+	$(".course-rows").click(function(){
+		window.location.replace("course-detail.php?id="+$(this).attr("id"));
+	});
 });
