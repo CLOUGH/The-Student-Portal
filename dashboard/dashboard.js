@@ -17,6 +17,11 @@ function populateBody(name)
 				$("#sidebar-body").empty().append(data);
 			});
 			break;
+		case "create user":
+			$.post('create-user.php',{}, function(data){
+				$("#sidebar-body").empty().append(data);
+			});
+			break;
 
 	}
 }
@@ -26,5 +31,11 @@ function editCourse(id)
 	$.post('create-course.php?id='+id,{}, function(data){
 		$("#sidebar-body").empty().append(data);
 	});
-
+}
+function editUser(id)
+{
+	console.log(id+"reached");
+	$.post('create-user.php?id='+id,{}, function(data){
+		$("#sidebar-body").empty().append(data);
+	});
 }

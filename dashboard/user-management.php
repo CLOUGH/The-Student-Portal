@@ -22,7 +22,12 @@
 			<td><?php echo $user->getLastName();?></td>
 			<td><?php echo User::getUserTypeS($user->getType());?></td>
 			<td><?php echo $user->getEmail();?></td>
-			<td><a href="#" onclick="editUser(<?php echo $user->getID() ?>)"><i class="icon-pencil"></i></a></td>
+			<td>
+				<?php if($user->getIsMain()==0):?>
+					<a href="#" onclick="editUser(<?php echo $user->getID() ?>)">
+					<i class="icon-pencil" ></i></a>
+				<?php endif; ?>
+			</td>
 		</tr>
 	<?php endforeach; ?>
     <tr>

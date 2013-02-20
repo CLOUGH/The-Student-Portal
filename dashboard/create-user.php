@@ -2,7 +2,7 @@
     $user;
     if(isset($_GET['id'])){
         include_once("../common/library/user.php");
-        $user = new User($id);
+        $user = new User($_GET['id']);
     }
 
 ?>
@@ -19,10 +19,11 @@
     <?php endif ?>
 
     <label>User</label>
-    <input type="text" name="user_name" value="<?php echo isset($user)?$user->getUsername():''?>">
+    <input <?php echo isset($user)?'disabled  id="disabledInput"':''?> type="text" name="user_name" value="<?php echo isset($user)?$user->getUsername():''?>">
 
     <label>Password</label>
-    <input type="text" name="password" value="<?php echo isset($user)?$user->getPassword():''?>">
+    <input type="password" name="password" value="">
+
 
     <label>First Name</label>
     <input type="text" name="first_name" value="<?php echo isset($user)?$user->getFirstname():''?>">
@@ -34,7 +35,7 @@
     <input type="text" name="type" value="<?php echo isset($user)?$user->getType():''?>">
 
     <label>Email</label>
-    <input type="text" name="simester" value="<?php echo isset($user)?$user->getEmail():''?>">
+    <input type="text" name="email" value="<?php echo isset($user)?$user->getEmail():''?>">
 
   </fieldset>
   <button type="submit" class="btn">Submit</button>

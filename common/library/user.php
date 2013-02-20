@@ -14,11 +14,12 @@ define('DATABASE_NAME', $database_name);
 		private $date_of_birth;
 		private $email;
 		private $type;
+		private $is_main;
 
 		public function User($id)
 		{
 			$db = new MySQLi(MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, DATABASE_NAME);
-			$sql="SELECT u.id, u.user_name, u.first_name, u.last_name, u.email, u.type
+			$sql="SELECT u.id, u.user_name, u.first_name, u.last_name, u.email, u.type, u.is_main
 				FROM users  u WHERE u.id='$id'";
 
 			$result=$db->query($sql);
@@ -30,6 +31,7 @@ define('DATABASE_NAME', $database_name);
 			$this->last_name=$row['last_name'];
 			$this->email=$row['email'];
 			$this->type=$row['type'];
+			$this->is_main=$row['is_main'];
 			$result->free();
 			$db->close();
 		}
@@ -83,6 +85,10 @@ define('DATABASE_NAME', $database_name);
 		public function getType()
 		{
 			return $this->type;
+		}
+		public function getIsMain()
+		{
+			return $this->is_main;
 		}
 	}
 ?>

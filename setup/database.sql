@@ -120,6 +120,7 @@ CREATE TABLE users (
   `email` varchar(50) NOT NULL,
   `type` varchar(20) NOT NULL,
   `creation_date` datetime NOT NULL,
+  `is_main2` SMALLINT NOT NULL DEFAULT  '0'
   PRIMARY KEY (`id`)
 );
 
