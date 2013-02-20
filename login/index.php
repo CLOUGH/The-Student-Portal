@@ -6,41 +6,22 @@
     <script type="text/javascript" src="../common/jquery/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="../common/jquery/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" src="js/jquery.innerfade.js"></script>
-        <script type="text/javascript">
-       $(document).ready(
-                function(){
-                    $('#news').innerfade({
-                        animationtype: 'slide',
-                        speed: 750,
-                        timeout: 2000,
-                        type: 'random',
-                        containerheight: '1em'
-                    });
-                    
-                    $('ul#portfolio').innerfade({
-                        speed: 1000,
-                        timeout: 5000,
-                        type: 'sequence',
-                        containerheight: '220px'
-                    });
-                    
-                    $('.fade').innerfade({
-                        speed: 1000,
-                        timeout: 6000,
-                        type: 'random_start',
-                        containerheight: '6.5em'
-                    });
-                    
-                    $('.adi').innerfade({
-                        speed: 'slow',
-                        timeout: 5000,
-                        type: 'random',
-                        containerheight: '150px'
-                    });
-
+    <script type="text/javascript" language="javascript" src="js/jquery.easing.min.1.3.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.jcontent.0.8.min.js"></script>
+        <script type="text/javascript" language="javascript">
+            $("document").ready(function(){
+               
+                $("div#demo3").jContent({orientation: 'horizontal', 
+                                         easing: "easeOutCirc", 
+                                         duration: 0,
+                                         auto: true,
+                                         pause_on_hover: true,
+                                         direction: 'next',
+                                         pause: 8000});
+                                     
+                               
             });
-    </script>
+        </script>                    
     <?php session_start();?>
 </head>
 
@@ -70,21 +51,21 @@
                     <input class="button" type="submit" name="Login" value="Login"/>
                 </p>
             </form>
-            <div class="fade"> 
-                <p>
-                    <span class="heading">Admin Access</span><br />
-                    Admin features now added, Admin has all access to system.
-                </p>
-                <p>
-                    <span class="heading">Student Access</span><br />
-                    Students will now be able to login and register for courses.
-                </p>
-                <p>
-                    <span class="heading">New Features Comming Soon</span><br />
-                    Check Back Frequently.
-                </p>
-            </div>       
-            </div>
+             <div id="demo3" class="demo3">     
+            <div class="slides">
+                <div style="margin-right:10px;" >
+                    <p class="title">Admin Section Added</p>
+                    <p class="txt">
+                        Admins can now login and make changes to subjects and update student information
+                    </p>
+                </div>
+                <div style="margin-right:10px;">
+                    <p class="title">Student Section Added</p>
+                    <p class="txt">
+                        Students now have access to the system
+                    </p>
+                </div>
+            </div>     
         </div>
     </div>
 </body>
