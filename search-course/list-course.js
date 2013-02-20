@@ -1,0 +1,9 @@
+$(document).ready(function(){
+	$(".course-rows").hover(function(){
+		console.log("rea");
+		$(this).css("cursor","pointer");
+		$(this).css("cursor","hand");
+	},function(){
+		$(this).css("cursor","default");
+	});
+});

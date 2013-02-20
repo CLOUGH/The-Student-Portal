@@ -1,9 +1,13 @@
 <?php
 require_once ("../setup/config.php");
-define('MYSQL_HOST', $mysql_host);
-define ('MYSQL_USERNAME',$mysql_username);
-define('MYSQL_PASSWORD',$mysql_password);
-define('DATABASE_NAME', $database_name);
+if(!defined('MYSQL_HOST'))
+	define('MYSQL_HOST', $mysql_host);
+if(!defined('MYSQL_USERNAME'))
+	define ('MYSQL_USERNAME',$mysql_username);
+if(!defined('MYSQL_PASSWORD'))
+	define('MYSQL_PASSWORD',$mysql_password);
+if(!defined('DATABASE_NAME'))
+	define('DATABASE_NAME', $database_name);
 class Course
 {
 	private $id;
@@ -58,6 +62,36 @@ class Course
 			$ids[$i]=$row['id'];
 		}
 		return $ids;
+	}
+	public static function courseSearch($title, $code, $subject,$credit_max, $credit_min,
+								$faculty, $degree_name, $simester, $level)
+	{
+		$db = new MySQLi(MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, DATABASE_NAME);
+		$sql="SELECT c.id FROM courses c WHERE ";
+
+		if(trim($title)!="")
+			$sql .= " c.title LIKE '%$title%' AND";
+		if(trim($code)!="")
+			$sql .= " c.code LIKE '%$code%' AND";
+		if(trim($subject)!="")
+			$sql .=" c.subject LIKE '%$subject%' AND";
+		if(trim($faculty)=="ALL")
+			$sql .=" c.faculty LIKE '%%' AND";
+		else if(trim($faculty)!="ALL")
+			$sql .= " c.faculty LIKE '%$faculty%' AND";
+		$sql= substr($sql,0,strrpos($sql, 'AND',-1));
+		$sql.=" GROUP BY c.code";
+
+		$result= $db->query($sql);
+		$ids=array();
+
+		for($i=0;$i<$result->num_rows;$i++)
+		{
+			$row = $result->fetch_assoc();
+			$ids[$i]=$row['id'];
+		}
+		return $ids;
+
 	}
 	/*-------------------------------------------------------------------------------
 		Getters
