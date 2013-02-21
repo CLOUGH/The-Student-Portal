@@ -3,25 +3,49 @@
 <head>
 	<title>Login</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" title="style">
+    <link type="text/css" rel="stylesheet" href="css/rhinoslider-1.05.css" />
     <script type="text/javascript" src="../common/jquery/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="../common/jquery/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" language="javascript" src="js/jquery.easing.min.1.3.js"></script>
-    <script type="text/javascript" language="javascript" src="js/jquery.jcontent.0.8.min.js"></script>
-        <script type="text/javascript" language="javascript">
-            $("document").ready(function(){
-               
-                $("div#demo3").jContent({orientation: 'horizontal', 
-                                         easing: "easeOutCirc", 
-                                         duration: 0,
-                                         auto: true,
-                                         pause_on_hover: true,
-                                         direction: 'next',
-                                         pause: 8000});
-                                     
-                               
+    <script type="text/javascript" src="js/rhinoslider-1.05.min.js"></script>
+    <script type="text/javascript" src="js/mousewheel.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+            
+           $(document).ready(function() {
+                $('#slider').rhinoslider({
+                    showTime: 9000,
+                    controlsMousewheel: false,
+                    controlsKeyboard: false,
+                    controlsPrevNext: false,
+                    controlsPlayPause: false,
+                    autoPlay: true,
+                    pauseOnHover: true,
+                    showCaptions: 'always',
+                    showBullets: 'never',
+                    showControls: 'never'
+                });
             });
-        </script>                    
+        </script>
+        <style type="text/css">
+            body { background-color:#000; }
+            
+            #slider {
+                width:600px;
+                height:80px;
+                
+                /*IE bugfix*/
+                padding:0;
+                margin:0;
+            }
+            
+            #slider li { list-style:none; }
+            
+            #page {
+                width:600px;
+                margin:50px auto;
+            }
+        </style>     
     <?php session_start();?>
 </head>
 
@@ -51,21 +75,12 @@
                     <input class="button" type="submit" name="Login" value="Login"/>
                 </p>
             </form>
-             <div id="demo3" class="demo3">     
-            <div class="slides">
-                <div style="margin-right:10px;" >
-                    <p class="title">Admin Section Added</p>
-                    <p class="txt">
-                        Admins can now login and make changes to subjects and update student information
-                    </p>
-                </div>
-                <div style="margin-right:10px;">
-                    <p class="title">Student Section Added</p>
-                    <p class="txt">
-                        Students now have access to the system
-                    </p>
-                </div>
-            </div>     
+            <div id="page">
+            <ul id="slider">
+                <li><img src="img/slider/slider1.png" alt="" /></li>
+                <li><img src="img/slider/slider2.png" alt="" /></li>
+            </ul>
+        </div>
         </div>
     </div>
 </body>
