@@ -43,8 +43,19 @@
     <label>Type</label>
     <input type="text" name="type" value="<?php echo isset($course)?$course->getType():''?>">
 
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Add Schedule <i class="icon-chevron-down" id="detail-search-dropdown-icon"></i>
+      </a>
+        <div id="collapseOne" class="accordion-body collapse in">
+
+        </div>
+    </div>
+
     <label>Description</label>
     <textarea rows="3" name="description" style="width:80%"><?php echo isset($course)?$course->getDescription():''?></textarea>
+
+
   </fieldset>
   <button type="submit" class="btn">Submit</button>
 </form>
